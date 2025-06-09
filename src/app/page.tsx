@@ -5,6 +5,7 @@ import Hero from "@/components/Hero";
 import Us from "@/components/Us";
 import Services from "@/components/Services";
 import Blog from "@/components/Blog";
+import Clients from "@/components/Clients";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <Us />
       <Services />
       <Blog />
+      <Clients />
     </div>
   );
 }
