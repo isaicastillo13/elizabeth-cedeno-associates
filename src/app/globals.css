@@ -46,7 +46,7 @@ a {
 }
 
 @layer utilities {
-  .animation-pause {
+  .paused {
     animation-play-state: paused;
   }
 }
