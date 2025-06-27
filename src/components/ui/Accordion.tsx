@@ -14,7 +14,7 @@ export default function Accordion() {
       id="accordion-color"
       data-accordion="collapse"
       data-active-classes="bg-blue-100 dark:bg-gray-800 text-blue-600 dark:text-white"
-      className="w-full max-w-2xl mx-auto bg-white dark:bg-gray-900 rounded-xl p-6 group flex flex-col gap-4 shadow-lg"
+      className="w-full max-w-2xl mx-auto bg-white dark:bg-gray-900 rounded-xl p-6 group"
     >
 
       <h1 className="text-3xl mb-4 text-primario 0 dark:text-white uppercase text-center">

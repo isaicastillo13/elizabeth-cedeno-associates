@@ -1,30 +1,25 @@
-'use client';
+"use client";
 
 import Image from "next/image";
 import { root } from "postcss";
 import React, { use } from "react";
 import Accordions from "@/components/ui/Accordion";
 
-
-
 const Services = () => {
+  const [state, setState] = React.useState("close");
 
-  const [state, setState] = React.useState('close');
-  
   const openAccordions = () => {
     console.log("State:", state);
 
-    if (state === 'close') {
+    if (state === "close") {
       console.log("Open accordions");
-      setState('open')
-    
-    }else if (state === 'open') {
+      setState("open");
+    } else if (state === "open") {
       console.log("Close accordions");
-      setState('close');
+      setState("close");
     }
   };
 
-  
   return (
     <>
       <section
@@ -32,7 +27,9 @@ const Services = () => {
         id="servicios"
       >
         <div
-          className={`servicios-content flex justify-center items-end relative transition-opacity duration-500 ease-in-out opacity-100 ${console.log(state)} ${state === 'open' ? 'hidden' : 'block'}`} // Adjusted to use template literals
+          className={`servicios-content flex justify-center items-end relative transition-opacity duration-500 ease-in-out opacity-100 ${console.log(
+            state
+          )} ${state === "open" ? "hidden" : "block"}`} // Adjusted to use template literals
           id="legales-section"
         >
           {/* <img src="./assets/img/fondo_legales.jpg" className="absolute top-0 left-0 w-full h-full object-cover" alt="" /> */}
@@ -57,7 +54,6 @@ const Services = () => {
             {/* <img src="./assets/img/icons/plus.png" className="w-12 h-12" alt="" /> */}
 
             <button onClick={openAccordions}>
-              
               <Image
                 src="/assets/icons/plus.png"
                 className="w-12 h-12"
@@ -68,10 +64,14 @@ const Services = () => {
             </button>
           </div>
         </div>
-        <div className={`${console.log(state)} ${state === 'open' ? 'block' : 'hidden'} accordions-content w-full h-full bg-white z-20 transition-all duration-500 ease-in-out `}>
+        <div
+          className={`${console.log(state)} ${
+            state === "open" ? "block" : "hidden"
+          } accordions-content w-full h-full bg-white z-20 transition-all duration-500 ease-in-out flex justify-center items-center`}
+        >
           <Accordions />
         </div>
-        
+
         <div
           className="servicios-content flex justify-center items-end relative transition-opacity duration-500 ease-in-out opacity-100"
           id="consultoria-section"
@@ -109,6 +109,5 @@ const Services = () => {
     </>
   );
 };
-
 
 export default Services;
