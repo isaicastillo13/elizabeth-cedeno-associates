@@ -67,7 +67,7 @@ const Services = () => {
         <div
           className={`${console.log(state)} ${
             state === "open" ? "block" : "hidden"
-          } accordions-content w-full h-full bg-white z-20 transition-all duration-500 ease-in-out `}
+          } accordions-content w-full h-full bg-white z-20 transition-all duration-500 ease-in-out flex justify-center items-center`}
         >
           <Accordions />
         </div>
