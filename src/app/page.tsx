@@ -7,6 +7,7 @@ import Services from "@/components/sections/Services";
 import Blog from "@/components/blog/Blog";
 import Clients from "@/components/sections/Clients";
 import Form from "@/components/forms/FormContact";
+import Footer from "@/components/sections/Footer";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <Blog />
       <Clients />
       <Form />
+      <Footer />
     </div>
   );
 }
