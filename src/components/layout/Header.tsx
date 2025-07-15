@@ -21,7 +21,7 @@ const Header = () => {
     <header className="w-full">
       <nav className="fixed z-20 flex flex-col items-center justify-between w-full h-auto p-2 overflow-hidden sm:flex-row md:h-24 bg-primario md:pr-12">
         <div className="flex items-center justify-between w-full h-full md:w-auto">
-          <a href="#inicio" className="md:h-44">
+          <a href="#hero" className="md:h-44">
             {/* Logo para pantallas pequeñas */}
             <Image
               className="w-auto h-16 md:hidden"
