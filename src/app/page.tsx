@@ -4,7 +4,7 @@ import Header from "@/components/layout/Header";
 import Hero from "@/components/sections/Hero";
 import Us from "@/components/sections/Us";
 import Services from "@/components/sections/Services";
-import Blog from "@/components/blog/Blog";
+import Blog from "@/components/blog/Articulos";
 import Clients from "@/components/sections/Clients";
 import Form from "@/components/forms/FormContact";
 import Footer from "@/components/sections/Footer";

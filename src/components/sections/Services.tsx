@@ -37,7 +37,7 @@ const Services = () => {
   return (
     <>
       <section
-        className="grid md:grid-cols-2 sm:grid-cols-1 h-screen md:mb-32 overflow-hidden mb-40"
+        className="grid h-screen mb-40 overflow-hidden md:grid-cols-2 sm:grid-cols-1 md:mb-32"
         id="servicios"
       >
         <div
@@ -46,21 +46,21 @@ const Services = () => {
           )} ${state === "open" ? "hidden" : "block"}`} // Adjusted to use template literals
           id="legales-section"
         >
-          {/* <img src="./assets/img/fondo_legales.jpg" className="absolute top-0 left-0 w-full h-full object-cover" alt="" /> */}
+          {/* <img src="./assets/img/fondo_legales.jpg" className="absolute top-0 left-0 object-cover w-full h-full" alt="" /> */}
           <Image
             src="/assets/image/fondo_legales.jpg"
             alt="Fondo Legales"
-            className="absolute top-0 left-0 w-full h-full object-cover"
+            className="absolute top-0 left-0 object-cover w-full h-full"
             width={1920}
             height={1080}
           />
-          <div className="absolute inset-0 w-full h-full bg-primario bg-opacity-50"></div>
+          <div className="absolute inset-0 w-full h-full bg-opacity-50 bg-primario"></div>
           <div
-            className="absolute flex flex-col gap-4 justify-center items-center bottom-1/4 z-10 cursor-pointer"
+            className="absolute z-10 flex flex-col items-center justify-center gap-4 cursor-pointer bottom-1/4"
             id="showLegalesAccordion"
           >
             <h3
-              className="text-white font-bold text-3xl"
+              className="text-3xl font-bold text-white"
               data-translate="legales"
             >
               LEGALES
@@ -95,21 +95,21 @@ const Services = () => {
           )} ${state2 === "open" ? "hidden" : "block"}`} // Adjusted to use template literals
           id="legales-section"
         >
-          {/* <img src="./assets/img/fondo_legales.jpg" className="absolute top-0 left-0 w-full h-full object-cover" alt="" /> */}
+          {/* <img src="./assets/img/fondo_legales.jpg" className="absolute top-0 left-0 object-cover w-full h-full" alt="" /> */}
           <Image
             src="/assets/image/fondo_consultoria.jpg"
             alt="Fondo Legales"
-            className="absolute top-0 left-0 w-full h-full object-cover"
+            className="absolute top-0 left-0 object-cover w-full h-full"
             width={1920}
             height={1080}
           />
-          <div className="absolute inset-0 w-full h-full bg-primario bg-opacity-50"></div>
+          <div className="absolute inset-0 w-full h-full bg-opacity-50 bg-primario"></div>
           <div
-            className="absolute flex flex-col gap-4 justify-center items-center bottom-1/4 z-10 cursor-pointer"
+            className="absolute z-10 flex flex-col items-center justify-center gap-4 cursor-pointer bottom-1/4"
             id="showLegalesAccordion"
           >
             <h3
-              className="text-white font-bold text-3xl"
+              className="text-3xl font-bold text-white"
               data-translate="legales"
             >
               CONSULTORIA
