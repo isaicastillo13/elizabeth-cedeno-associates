@@ -3,8 +3,8 @@
 import Image from "next/image";
 import { root } from "postcss";
 import React, { use } from "react";
-import AccordionsLegal from "@/components/ui/AccordionLegales";
-import AccordionsConsultoria from "@/components/ui/AccordionConsultoria";
+import AccordionsLegal from "@/components/sections/AccordionLegales";
+import AccordionsConsultoria from "@/components/sections/AccordionConsultoria";
 
 const Services = () => {
   const [state, setState] = React.useState("close");

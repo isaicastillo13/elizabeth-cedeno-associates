@@ -2,14 +2,14 @@ import Image from 'next/image';
 
 const Blog = () => {
     return(
-        <section className="flex flex-col justify-center items-center w-5/6 mx-auto md:h-screen" id="articulos">
-    <h2 className="text-5xl text-primario mb-11 font-bold uppercase" data-translate="articulos_titulo">ARTÍCULOS</h2>
+        <section className="flex flex-col items-center justify-center w-5/6 mx-auto md:h-screen" id="articulos">
+    <h2 className="text-5xl font-bold uppercase text-primario mb-11" data-translate="articulos_titulo">ARTÍCULOS</h2>
 
-    <div className="grid md:grid-cols-3 gap-4">
-      <div className="border rounded-lg shadow-lg overflow-hidden">
+    <div className="grid gap-4 md:grid-cols-3">
+      <div className="overflow-hidden border rounded-lg shadow-lg">
 
         <a href="./articulos.html" className="block">
-          <img className="w-full h-60 object-cover"
+          <img className="object-cover w-full h-60"
             src="https://plus.unsplash.com/premium_photo-1680363254554-d1c63ad8d33d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="" />
         </a>
@@ -29,10 +29,10 @@ const Blog = () => {
         </div>
       </div>
 
-      <div className="border rounded-lg shadow-lg overflow-hidden">
+      <div className="overflow-hidden border rounded-lg shadow-lg">
 
         <a href="./articulos.html" className="block">
-          <img className="w-full h-60 object-cover"
+          <img className="object-cover w-full h-60"
             src="https://images.unsplash.com/photo-1521791055366-0d553872125f?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="" />
         </a>
@@ -52,10 +52,10 @@ const Blog = () => {
         </div>
       </div>
 
-      <div className="border rounded-lg shadow-lg overflow-hidden">
+      <div className="overflow-hidden border rounded-lg shadow-lg">
 
         <a href="./articulos.html" className="block">
-          <img className="w-full h-60 object-cover"
+          <img className="object-cover w-full h-60"
             src="https://images.unsplash.com/photo-1642229407991-e28d009cb968?q=80&w=1973&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="" />
         </a>

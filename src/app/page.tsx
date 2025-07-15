@@ -1,19 +1,17 @@
 import Image from "next/image";
-import styles from "./page.module.css";
-import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import Us from "@/components/Us";
-import Services from "@/components/Services";
-import Blog from "@/components/Blog";
-import Clients from "@/components/Clients";
-import Form from "@/components/FormContact";
-
+import styles from "@app/layout/page.module.css";
+import Header from "@/components/layout/Header";
+import Hero from "@/components/sections/Hero";
+import Us from "@/components/sections/Us";
+import Services from "@/components/sections/Services";
+import Blog from "@/components/blog/Blog";
+import Clients from "@/components/sections/Clients";
+import Form from "@/components/forms/FormContact";
 
 export default function Home() {
   return (
-    
     <div>
-       <Header />
+      <Header />
       <Hero />
       <Us />
       <Services />
