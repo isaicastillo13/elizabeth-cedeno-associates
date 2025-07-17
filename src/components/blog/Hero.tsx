@@ -6,11 +6,11 @@ function Hero() {
   return (
     <>
       <div className="container flex flex-col items-center justify-center h-screen gap-10 p-10 text-center">
-        <h1 className="flex flex-col items-start justify-start mb-4 text-4xl font-bold text-left">
+        <h1 className="flex flex-col items-start justify-start mb-4 text-4xl font-bold text-left sm:text-5xl md:text-6xl lg:text-7xl">
           Blog Legal: Guías prácticas, análisis y consejos de expertos en
           derecho en Panamá
         </h1>
-        <p className="flex items-start justify-start text-lg text-left item">
+        <p className="flex items-start justify-start text-base text-left sm:text-lg md:text-xl lg:text-2xl text-secundario">
           Descubra artículos claros y actualizados sobre derecho panameño,
           cumplimiento normativo, trámites legales, y consejos prácticos para
           empresas y personas. Escrito por abogados especializados que entienden
