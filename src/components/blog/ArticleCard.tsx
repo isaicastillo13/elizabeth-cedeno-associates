@@ -1,3 +1,5 @@
+'use client'
+import Link from "next/link";
 import React from "react";
 type Props = {
   colRow?: string;
@@ -7,6 +9,7 @@ type Props = {
   authorImgSrc?: string;
   authorName?: string;
   date?: string;
+  slug?: string;
 };
 export default function ArticleCard({
   colRow = "row",
@@ -16,28 +19,38 @@ export default function ArticleCard({
   authorImgSrc = "",
   authorName = "",
   date = "",
+  slug
 }: Props) {
   return (
     <>
-      <article className={`flex flex-${colRow} gap-8 p-4`}>
-        {imgSrc && <img src={imgSrc}/>}
+      <Link href={`/blog/${slug}`}>
+        <article className={`flex flex-${colRow} gap-8 p-10 border-b-2`}>
+        {imgSrc && <img src={imgSrc} />}
         <div className="flex flex-col gap-8">
-          <div>
-            <h2 className="text-2xl font-bold md:text-3xl lg:text-5xl">{title}</h2>
-            <img src="" alt="" />
-          </div>
-          <p className="text-base md:text-lg lg:text-xl text-secundario">{description}</p>
+          <h2 className="font-bold text-2xl md:text-3xl lg:text-[40px]">
+            {title}
+          </h2>
+          <p className="text-sm md:text-base lg:text-[18px] text-secundario">
+            {description}
+          </p>
           <div className="flex items-center gap-4">
-            {authorImgSrc && <img src={authorImgSrc} alt={authorName} className="w-10 rounded-full"/>}
+            {authorImgSrc && (
+              <img
+                src={authorImgSrc}
+                alt={authorName}
+                className="w-10 rounded-full"
+              />
+            )}
             <div>
-              <h5 className="text-lg md:text-xl lg:text-2xl font-semibol">{authorName}</h5>
-              <time>{date}</time>
+              <h5 className="text-xs md:text-sm lg:text-[16px] font-semibol">
+                {authorName}
+              </h5>
+              <time className="text-xs md:text-sm lg:text-[16px]">{date}</time>
             </div>
           </div>
         </div>
       </article>
-         <hr className="w-full my-4 border-gray-300 border-t-1" />
-
+      </Link>
     </>
   );
 }
