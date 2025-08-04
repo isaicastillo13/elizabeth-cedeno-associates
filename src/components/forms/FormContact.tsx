@@ -1,10 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import edificios_ciudad_panama from "../../../public/assets/image/edificios_ciudad_panama.jpg";
+import { set } from "mongoose";
 
 
 
 export default function FormContact() {
-   const handleSubmit = async () => {}
+  const [formData, setFormData] = useState({name: "", email: "", message: ""});
+  const [status, setStatus] = useState("");
+  
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+
+  const res = await fetch("/api/contact", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({formData}),
+  });
+
+  const data = await res.json();
+  setStatus(data.success ? "Correo enviado correctamente" : "Error al enviar el correo");
+};
+
  
   return (
     <>
@@ -23,7 +39,7 @@ export default function FormContact() {
             experiencia está a su disposición.
           </p>
 
-          <form action="" className="w-full">
+          <form onSubmit={handleSubmit} className="w-full">
             <div className="flex flex-col gap-4">
               <label htmlFor="name" className="text-lg font-semibold">
                 Nombre:
@@ -35,6 +51,8 @@ export default function FormContact() {
                 name="name"
                 className="p-2 text-gray-500 border rounded"
                 required
+                value={formData.name}
+                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
               />
 
               <label htmlFor="email" className="text-lg font-semibold">
@@ -47,6 +65,8 @@ export default function FormContact() {
                 name="email"
                 className="p-2 text-gray-500 border rounded"
                 required
+                value={formData.email}
+                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
               />
 
               <label htmlFor="message" className="text-lg font-semibold">
@@ -59,6 +79,8 @@ export default function FormContact() {
                 placeholder="Escriba su mensaje aquí..."
                 className="p-2 text-gray-500 border rounded resize-none"
                 required
+                value={formData.message}
+                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                 
               ></textarea>
 
