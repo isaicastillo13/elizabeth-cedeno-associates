@@ -1,4 +1,5 @@
 "use client"; // Si usas Next.js App Router
+import Link from "next/link";
 import Image from "next/image";
 import LanguageToggle from "../common/LanguageToggle"; // Asegúrate de que la ruta sea correcta
 
@@ -21,7 +22,7 @@ const Header = () => {
     <header className="w-full">
       <nav className="fixed z-20 flex flex-col items-center justify-between w-full h-auto p-2 overflow-hidden sm:flex-row md:h-24 bg-primario md:pr-12">
         <div className="flex items-center justify-between w-full h-full md:w-auto">
-          <a href="#hero" className="md:h-44">
+          <Link href="/" className="md:h-44">
             {/* Logo para pantallas pequeñas */}
             <Image
               className="w-auto h-16 md:hidden"
@@ -39,7 +40,7 @@ const Header = () => {
               width={256}
               height={64}
             />
-          </a>
+          </Link>
 
           {/* Botón menú hamburguesa */}
           <div className="sm:hidden">
@@ -68,27 +69,27 @@ const Header = () => {
         {/* Menú para pantallas grandes */}
         <ul className="items-center hidden gap-4 text-white sm:flex sm:gap-8">
           <li>
-            <a href="#nosotros" className="hover:underline">
+            <Link href="/#nosotros" className="hover:underline">
               Nosotros
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#servicios" className="hover:underline">
+            <Link href="/#servicios" className="hover:underline">
               Servicios
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#articulos" className="hover:underline">
+            <Link href="/#articulos" className="hover:underline">
               Artículos
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#contacto"
+            <Link
+              href="/#contacto"
               className="flex items-center justify-center h-12 px-4 font-bold text-center bg-white rounded-full w-28 sm:w-36 text-primario"
             >
               Contactar
-            </a>
+            </Link>
           </li>
           <li className="w-6">
             <LanguageToggle onChange={handleLanguageChange} />
@@ -99,27 +100,27 @@ const Header = () => {
         {isMobileMenuOpen && (
           <ul className="flex flex-col items-center justify-center gap-4 mt-4 text-white sm:hidden">
             <li>
-              <a href="#nosotros" className="hover:underline">
+              <Link href="/#nosotros" className="hover:underline">
                 Nosotros
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#servicios" className="hover:underline">
+              <Link href="/#servicios" className="hover:underline">
                 Servicios
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#articulos" className="hover:underline">
+              <Link href="/#articulos" className="hover:underline">
                 Artículos
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#contacto"
+              <Link
+                href="/#contacto"
                 className="flex items-center justify-center h-12 px-4 font-bold text-center bg-white rounded-full w-28 sm:w-36 text-primario"
               >
                 Contactar
-              </a>
+              </Link>
             </li>
             <li>
               <LanguageToggle onChange={handleLanguageChange} />

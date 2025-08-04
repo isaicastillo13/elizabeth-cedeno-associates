@@ -1,7 +1,11 @@
 import React from "react";
 import edificios_ciudad_panama from "../../../public/assets/image/edificios_ciudad_panama.jpg";
 
+
+
 export default function FormContact() {
+   const handleSubmit = async () => {}
+ 
   return (
     <>
       <section id="contacto" className="relative flex flex-col items-center justify-center h-screen gap-2 p-6 text-white bg-center bg-cover shadow-md bg-primario">

@@ -42,10 +42,10 @@ export default function ArticleCard({
               />
             )}
             <div>
-              <h5 className="text-xs md:text-sm lg:text-[16px] font-semibol">
+              <h5 className="text-xs md:text-sm lg:text-[16px] font-semibol text-primario font-semibold">
                 {authorName}
               </h5>
-              <time className="text-xs md:text-sm lg:text-[16px]">{date}</time>
+              <time className="text-xs md:text-sm lg:text-[16px] text-secundario">{date}</time>
             </div>
           </div>
         </div>
