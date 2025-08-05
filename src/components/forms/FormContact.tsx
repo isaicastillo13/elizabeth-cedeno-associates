@@ -127,9 +127,20 @@ export default function FormContact() {
 
               <button
                 type="submit"
-                className="p-2 font-bold text-green-500 transition-colors duration-300 bg-white rounded hover:bg-green-500 hover:text-white"
+                className={`p-2 font-bold text-green-500 transition-colors duration-300 bg-white rounded hover:bg-green-500 hover:text-white ${isSubmitting ? "hidden" : "block"}`}
               >
-                Enviar
+                <span>Enviar</span>
+              </button>
+              
+              <button
+                disabled={true}
+                className={`flex justify-center gap-4 p-2 font-bold text-gray-400 transition-colors cursor-not-allowed duration-300  bg-white rounded ${isSubmitting ? "block" : "hidden"}`}
+              >
+         
+                <span>
+                  Enviando
+                </span>
+                <img src="https://api.iconify.design/line-md:loading-alt-loop.svg?color=%23888888" alt="" />
               </button>
             </div>
           </form>
