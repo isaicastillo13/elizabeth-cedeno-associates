@@ -14,20 +14,20 @@ const logos = [
 export default function InfiniteCarousel() {
   return (
     <section className="py-12 bg-white text-primario">
-      <h2 className="text-center text-4xl font-semibold mb-6 uppercase">
+      <h2 className="mb-6 text-4xl font-semibold text-center uppercase">
         Nuestros <span className="font-bold">clientes y aliados estratégicos</span>
       </h2>
 
       <div className="relative overflow-hidden whitespace-nowrap group">
         <div className="flex w-max animate-slide-left group-hover:animation-pause">
           {[...logos, ...logos].map((logo, index) => (
-            <div key={index} className="mx-6 flex items-center">
+            <div key={index} className="flex items-center mx-6">
               <Image
                 src={logo.src}
                 alt={logo.alt}
                 width={64}
                 height={64}
-                className="h-16 w-auto object-contain"
+                className="object-contain"
               />
             </div>
           ))}
