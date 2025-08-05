@@ -11,13 +11,10 @@ const Services = () => {
   const [state2, setState2] = React.useState("close");
 
   const openAccordions = () => {
-    console.log("State:", state);
 
     if (state === "close") {
-      console.log("Open accordions");
       setState("open");
     } else if (state === "open") {
-      console.log("Close accordions");
       setState("close");
     }
   };
@@ -41,9 +38,7 @@ const Services = () => {
         id="servicios"
       >
         <div
-          className={`servicios-content flex justify-center items-end relative transition-opacity duration-500 ease-in-out opacity-100 ${console.log(
-            state
-          )} ${state === "open" ? "hidden" : "block"}`} // Adjusted to use template literals
+          className={`servicios-content flex justify-center items-end relative transition-opacity duration-500 ease-in-out opacity-100 ${state === "open" ? "hidden" : "block"}`} // Adjusted to use template literals
           id="legales-section"
         >
           {/* <img src="./assets/img/fondo_legales.jpg" className="absolute top-0 left-0 object-cover w-full h-full" alt="" /> */}
@@ -79,7 +74,7 @@ const Services = () => {
           </div>
         </div>
         <div
-          className={`${console.log(state)} ${
+          className={`${
             state === "open" ? "block" : "hidden"
           } accordions-content w-full h-full bg-white z-10 transition-all duration-500 ease-in-out flex flex-col justify-start items-center p-8`}
         >
@@ -90,9 +85,7 @@ const Services = () => {
 
 
         <div
-          className={`servicios-content flex justify-center items-end relative transition-opacity duration-500 ease-in-out opacity-100 ${console.log(
-            state2
-          )} ${state2 === "open" ? "hidden" : "block"}`} // Adjusted to use template literals
+          className={`servicios-content flex justify-center items-end relative transition-opacity duration-500 ease-in-out opacity-100 ${state2 === "open" ? "hidden" : "block"}`} // Adjusted to use template literals
           id="legales-section"
         >
           {/* <img src="./assets/img/fondo_legales.jpg" className="absolute top-0 left-0 object-cover w-full h-full" alt="" /> */}
@@ -128,7 +121,7 @@ const Services = () => {
           </div>
         </div>
         <div
-          className={`${console.log(state2)} ${
+          className={`${
             state2 === "open" ? "block" : "hidden"
           } accordions-content w-full h-full bg-white z-10 transition-all duration-500 ease-in-out flex flex-col justify-start items-center p-8`}
         >
