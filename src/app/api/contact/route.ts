@@ -5,6 +5,11 @@ export async function POST(request: Request) {
     try {
         const { name, email, message } = await request.json();
 
+        console.log("Datos recibidos:", { name, email, message });
+        console.log("Email user:", process.env.EMAIL_USER);
+        console.log("Email pass:", process.env.EMAIL_PASS);
+
+
         const transporter = nodemailer.createTransport({
             service: "gmail",
             auth: {

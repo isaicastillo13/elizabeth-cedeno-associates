@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+"use client";
+import { use, useState } from "react";
 import edificios_ciudad_panama from "../../../public/assets/image/edificios_ciudad_panama.jpg";
 import { set } from "mongoose";
 
@@ -11,14 +12,22 @@ export default function FormContact() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
   e.preventDefault();
 
-  const res = await fetch("/api/contact", {
+  try {
+    
+    const res = await fetch("/api/contact", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({formData}),
+    body: JSON.stringify(formData),
   });
 
-  const data = await res.json();
-  setStatus(data.success ? "Correo enviado correctamente" : "Error al enviar el correo");
+    const data = await res.json();
+    setStatus(data.success ? "Correo enviado correctamente" : "Error al enviar el correo");
+    
+  } catch (error) {
+    console.error("Error submitting form:", error);
+    setStatus("Error al enviar el correo");
+    return;
+  }
 };
 
  
