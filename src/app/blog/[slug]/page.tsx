@@ -14,7 +14,7 @@ const fakePosts = [
     content: 'Este es el contenido del artículo sobre cómo cuidar tu sonrisa.',
   },
   {
-    slug: 'promociones-julio-2025',
+    slug: 'Abogados-especialistas-en-derecho-administrativo',
     title: 'Promociones de Julio 2025',
     content: 'Aprovecha nuestras ofertas exclusivas para este mes.',
   },

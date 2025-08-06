@@ -79,8 +79,8 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link href="/#articulos" className="hover:underline">
-              Artículos
+            <Link href="/blog" className="hover:underline">
+              Blog
             </Link>
           </li>
           <li>
